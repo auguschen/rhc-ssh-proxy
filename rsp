@@ -1,0 +1,14 @@
+#!/bin/bash
+
+while true
+do
+  ps -fe|grep 'ssh -N -f -D 7070 588161877628e130830000a5@jstardemo-augus.rhcloud.com ps'|grep -v grep > /dev/null 2>&1
+  if [ $? -ne 0 ]
+  then
+    echo 'start ssh proxy...'
+    ssh -N -f -D 7070 588161877628e130830000a5@jstardemo-augus.rhcloud.com ps
+  else
+    echo 'ssh proxy runing...'
+  fi
+  sleep 1m
+done
