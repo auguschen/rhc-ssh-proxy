@@ -6,7 +6,7 @@ do
   if [ $? -ne 0 ]
   then
     echo 'start ssh proxy...'
-    ssh -N -f -D 7070 588161877628e130830000a5@jstardemo-augus.rhcloud.com ps
+    ssh -N -f -D 1080 588161877628e130830000a5@jstardemo-augus.rhcloud.com ps
   else
     echo 'ssh proxy runing...'
   fi
