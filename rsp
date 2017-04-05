@@ -2,11 +2,11 @@
 
 while true
 do
-  ps -fe|grep 'ssh -f -D 0.0.0.0:1080 588161877628e130830000a5@jstardemo-augus.rhcloud.com tailall'|grep -v grep > /dev/null 2>&1
+  ps -fe|grep 'ssh -f -D 0.0.0.0:1080 588161877628e130830000a5@jstardemo-augus.rhcloud.com tail_all'|grep -v grep > /dev/null 2>&1
   if [ $? -ne 0 ]
   then
     echo `date +'%Y-%m-%d %H:%M:%S'` 'start ssh proxy...'
-    ssh -f -D 0.0.0.0:1080 588161877628e130830000a5@jstardemo-augus.rhcloud.com tailall
+    ssh -f -D 0.0.0.0:1080 588161877628e130830000a5@jstardemo-augus.rhcloud.com tail_all
   else
     echo `date +'%Y-%m-%d %H:%M:%S'` 'ssh proxy runing...'
   fi
