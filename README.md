@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## 利用rhc搭建socks5梯子
 
-You can use the [editor on GitHub](https://github.com/auguschen/rhc-ssh-proxy/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/auguschen/rhc-ssh-proxy/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## 步骤
+  1. 在rhc上任意建立一个项目，我选择了之前建立好的wordpress项目，获取了ssh访问主机的命令。![获取ssh访问主机命令](https://note.augus.tech/api/file/getImage?fileId=58e743163c9b99000c000010)
+  2. 在树莓派上用 ssh-keygen 生成密钥,并将公钥内容添加到rhc的设置中![rhc添加key](https://note.augus.tech/api/file/getImage?fileId=58e743163c9b99000c00000f)
+  3. 在树莓派上执行 ssh -N -D 0.0.0.0:1080 xxxxxxx.rhcloud.com
+  4. 在局域网中其他机器上用chrome+switchyomega做测试
